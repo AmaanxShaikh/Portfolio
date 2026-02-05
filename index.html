@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Amaan Shaikh | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Mobile/Tablet Warning Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="mobile-overlay-content">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <h2 class="mobile-overlay-title">Für das beste Erlebnis</h2>
+            <p class="mobile-overlay-text">Diese Seite wurde für größere Bildschirme optimiert. Bitte öffnen Sie sie auf einem Laptop oder Desktop für die volle Erfahrung.</p>
+            <p class="mobile-overlay-text-en">This site is optimized for larger screens. Please view on a laptop or desktop for the best experience.</p>
+            <div class="mobile-overlay-links">
+                <a href="https://www.linkedin.com/in/amaanxshaikh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/AmaanxShaikh" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="mailto:shaikh.mohdamaan@gmail.com">Email</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social links sidebar -->
+    <div class="social-sidebar">
+        <a href="https://www.linkedin.com/in/amaanxshaikh/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+        </a>
+        <a href="https://github.com/AmaanxShaikh" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+        </a>
+        <a href="mailto:shaikh.mohdamaan@gmail.com" class="social-link" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#profile" class="logo">
+            <h1>Amaan.</h1>
+        </a>
+        <nav class="nav">
+            <a href="#profile" class="nav-link active" data-i18n="nav.profile">Profil</a>
+            <a href="#projects" class="nav-link" data-i18n="nav.projects">Projekte</a>
+            <a href="#resume" class="nav-link" data-i18n="nav.resume">Lebenslauf</a>
+            <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a>
+            <div class="lang-toggle" id="langToggle">
+                <span class="lang-option active" data-lang="de">DE</span>
+                <span class="lang-separator">/</span>
+                <span class="lang-option" data-lang="en">EN</span>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="fullpage-wrapper">
+        <!-- Hero / Profile Section -->
+        <section id="profile" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-greeting" data-i18n="hero.greeting">Hallo,</h2>
+                    <h2 class="hero-name" data-i18n="hero.name">Ich bin Mohammed Amaan.</h2>
+                    <p class="hero-description" data-i18n="hero.desc1">Angehender Data Scientist & ML Engineer.</p>
+                    <p class="hero-description" data-i18n="hero.desc2">Interessiert an Machine Learning, AI und Business Intelligence.</p>
+                    <p class="hero-description" data-i18n="hero.desc3">Masterstudent an der OvGU Magdeburg, Deutschland.</p>
+                    <a href="#resume" class="resume-link" data-i18n="hero.resumeLink">Lebenslauf ansehen</a>
+                </div>
+                <div class="hero-images">
+                    <!-- Primary: Analytics Dashboard SVG -->
+                    <div class="svg-container primary">
+                        <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Window chrome -->
+                            <rect x="0" y="0" width="480" height="360" rx="8" fill="currentColor" opacity="0.02"/>
+                            <circle cx="20" cy="16" r="5" fill="currentColor" opacity="0.15"/>
+                            <circle cx="36" cy="16" r="5" fill="currentColor" opacity="0.1"/>
+                            <circle cx="52" cy="16" r="5" fill="currentColor" opacity="0.07"/>
+                            <line x1="0" y1="32" x2="480" y2="32" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+
+                            <!-- Sidebar -->
+                            <rect x="0" y="32" width="80" height="328" fill="currentColor" opacity="0.03"/>
+                            <line x1="80" y1="32" x2="80" y2="360" stroke="currentColor" stroke-width="0.5" opacity="0.08"/>
+                            <rect x="16" y="52" width="48" height="4" rx="2" fill="currentColor" opacity="0.12"/>
+                            <rect x="16" y="72" width="40" height="3" rx="1.5" fill="currentColor" opacity="0.06"/>
+                            <rect x="16" y="84" width="36" height="3" rx="1.5" fill="currentColor" opacity="0.06"/>
+                            <rect x="16" y="96" width="44" height="3" rx="1.5" fill="currentColor" opacity="0.06"/>
+                            <rect x="12" y="116" width="56" height="20" rx="4" fill="currentColor" opacity="0.08"/>
+                            <rect x="20" y="124" width="32" height="3" rx="1.5" fill="currentColor" opacity="0.15"/>
+                            <rect x="16" y="148" width="38" height="3" rx="1.5" fill="currentColor" opacity="0.06"/>
+                            <rect x="16" y="160" width="42" height="3" rx="1.5" fill="currentColor" opacity="0.06"/>
+
+                            <!-- Top stats cards -->
+                            <rect x="100" y="48" width="110" height="60" rx="6" fill="currentColor" opacity="0.04" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.08"/>
+                            <rect x="112" y="60" width="50" height="4" rx="2" fill="currentColor" opacity="0.1"/>
+                            <rect x="112" y="74" width="70" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+                            <rect x="112" y="92" width="30" height="3" rx="1.5" fill="currentColor" opacity="0.08"/>
+
+                            <rect x="224" y="48" width="110" height="60" rx="6" fill="currentColor" opacity="0.04" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.08"/>
+                            <rect x="236" y="60" width="45" height="4" rx="2" fill="currentColor" opacity="0.1"/>
+                            <rect x="236" y="74" width="60" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+                            <rect x="236" y="92" width="35" height="3" rx="1.5" fill="currentColor" opacity="0.08"/>
+
+                            <rect x="348" y="48" width="110" height="60" rx="6" fill="currentColor" opacity="0.04" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.08"/>
+                            <rect x="360" y="60" width="55" height="4" rx="2" fill="currentColor" opacity="0.1"/>
+                            <rect x="360" y="74" width="65" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+                            <rect x="360" y="92" width="28" height="3" rx="1.5" fill="currentColor" opacity="0.08"/>
+
+                            <!-- Main chart area -->
+                            <rect x="100" y="124" width="240" height="140" rx="6" fill="currentColor" opacity="0.03" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.08"/>
+                            <rect x="112" y="136" width="60" height="5" rx="2" fill="currentColor" opacity="0.12"/>
+                            <!-- Grid lines -->
+                            <line x1="112" y1="170" x2="328" y2="170" stroke="currentColor" stroke-width="0.3" opacity="0.06" stroke-dasharray="3 3"/>
+                            <line x1="112" y1="195" x2="328" y2="195" stroke="currentColor" stroke-width="0.3" opacity="0.06" stroke-dasharray="3 3"/>
+                            <line x1="112" y1="220" x2="328" y2="220" stroke="currentColor" stroke-width="0.3" opacity="0.06" stroke-dasharray="3 3"/>
+                            <!-- Area chart fill -->
+                            <path d="M112,245 L140,220 L168,225 L196,195 L224,200 L252,170 L280,180 L308,155 L328,160 L328,245 Z" fill="currentColor" opacity="0.06"/>
+                            <!-- Area chart line -->
+                            <polyline points="112,245 140,220 168,225 196,195 224,200 252,170 280,180 308,155 328,160" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+                            <!-- Data points -->
+                            <circle cx="140" cy="220" r="3" fill="currentColor" opacity="0.4"/>
+                            <circle cx="196" cy="195" r="3" fill="currentColor" opacity="0.4"/>
+                            <circle cx="252" cy="170" r="3" fill="currentColor" opacity="0.4"/>
+                            <circle cx="308" cy="155" r="3" fill="currentColor" opacity="0.4"/>
+
+                            <!-- Side panel: donut chart -->
+                            <rect x="354" y="124" width="108" height="140" rx="6" fill="currentColor" opacity="0.03" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.08"/>
+                            <rect x="366" y="136" width="50" height="5" rx="2" fill="currentColor" opacity="0.12"/>
+                            <circle cx="408" cy="196" r="30" stroke="currentColor" stroke-width="6" opacity="0.08"/>
+                            <path d="M408,166 A30,30 0 0,1 435,206" stroke="currentColor" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+                            <path d="M435,206 A30,30 0 0,1 398,224" stroke="currentColor" stroke-width="6" stroke-linecap="round" opacity="0.2"/>
+                            <!-- Legend dots -->
+                            <circle cx="374" cy="242" r="3" fill="currentColor" opacity="0.35"/>
+                            <rect x="382" y="240" width="24" height="3" rx="1.5" fill="currentColor" opacity="0.1"/>
+                            <circle cx="418" cy="242" r="3" fill="currentColor" opacity="0.2"/>
+                            <rect x="426" y="240" width="24" height="3" rx="1.5" fill="currentColor" opacity="0.1"/>
+
+                            <!-- Bottom bar chart -->
+                            <rect x="100" y="278" width="362" height="70" rx="6" fill="currentColor" opacity="0.03" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.08"/>
+                            <rect x="112" y="290" width="55" height="5" rx="2" fill="currentColor" opacity="0.12"/>
+                            <!-- Bars -->
+                            <rect x="120" y="316" width="28" height="18" rx="2" fill="currentColor" opacity="0.12"/>
+                            <rect x="156" y="308" width="28" height="26" rx="2" fill="currentColor" opacity="0.18"/>
+                            <rect x="192" y="320" width="28" height="14" rx="2" fill="currentColor" opacity="0.1"/>
+                            <rect x="228" y="304" width="28" height="30" rx="2" fill="currentColor" opacity="0.25"/>
+                            <rect x="264" y="312" width="28" height="22" rx="2" fill="currentColor" opacity="0.15"/>
+                            <rect x="300" y="300" width="28" height="34" rx="2" fill="currentColor" opacity="0.3"/>
+                            <rect x="336" y="310" width="28" height="24" rx="2" fill="currentColor" opacity="0.18"/>
+                            <rect x="372" y="306" width="28" height="28" rx="2" fill="currentColor" opacity="0.22"/>
+                            <rect x="408" y="314" width="28" height="20" rx="2" fill="currentColor" opacity="0.14"/>
+                        </svg>
+                    </div>
+                    <!-- Secondary: ML Pipeline / Code SVG -->
+                    <div class="svg-container secondary">
+                        <svg viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Window chrome -->
+                            <rect x="0" y="0" width="360" height="280" rx="8" fill="currentColor" opacity="0.02"/>
+                            <circle cx="18" cy="14" r="4.5" fill="currentColor" opacity="0.15"/>
+                            <circle cx="32" cy="14" r="4.5" fill="currentColor" opacity="0.1"/>
+                            <circle cx="46" cy="14" r="4.5" fill="currentColor" opacity="0.07"/>
+                            <line x1="0" y1="28" x2="360" y2="28" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+
+                            <!-- Tab bar -->
+                            <rect x="10" y="32" width="60" height="18" rx="3" fill="currentColor" opacity="0.06"/>
+                            <rect x="18" y="38" width="36" height="3" rx="1.5" fill="currentColor" opacity="0.15"/>
+                            <rect x="76" y="32" width="60" height="18" rx="3" fill="currentColor" opacity="0.03"/>
+                            <rect x="84" y="38" width="40" height="3" rx="1.5" fill="currentColor" opacity="0.08"/>
+                            <line x1="0" y1="52" x2="360" y2="52" stroke="currentColor" stroke-width="0.3" opacity="0.08"/>
+
+                            <!-- Line numbers gutter -->
+                            <rect x="0" y="52" width="32" height="228" fill="currentColor" opacity="0.02"/>
+                            <line x1="32" y1="52" x2="32" y2="280" stroke="currentColor" stroke-width="0.3" opacity="0.06"/>
+
+                            <!-- Line numbers -->
+                            <text x="22" y="72" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">1</text>
+                            <text x="22" y="88" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">2</text>
+                            <text x="22" y="104" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">3</text>
+                            <text x="22" y="120" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">4</text>
+                            <text x="22" y="136" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">5</text>
+                            <text x="22" y="152" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">6</text>
+                            <text x="22" y="168" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">7</text>
+                            <text x="22" y="184" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">8</text>
+                            <text x="22" y="200" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">9</text>
+                            <text x="22" y="216" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">10</text>
+                            <text x="22" y="232" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">11</text>
+                            <text x="22" y="248" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">12</text>
+                            <text x="22" y="264" font-size="8" fill="currentColor" opacity="0.12" text-anchor="end" font-family="monospace">13</text>
+
+                            <!-- Code lines - import block -->
+                            <rect x="42" y="66" width="42" height="4" rx="1" fill="currentColor" opacity="0.3"/>
+                            <rect x="90" y="66" width="60" height="4" rx="1" fill="currentColor" opacity="0.12"/>
+                            <rect x="42" y="82" width="42" height="4" rx="1" fill="currentColor" opacity="0.3"/>
+                            <rect x="90" y="82" width="80" height="4" rx="1" fill="currentColor" opacity="0.12"/>
+                            <rect x="176" y="82" width="20" height="4" rx="1" fill="currentColor" opacity="0.08"/>
+                            <rect x="42" y="98" width="42" height="4" rx="1" fill="currentColor" opacity="0.3"/>
+                            <rect x="90" y="98" width="95" height="4" rx="1" fill="currentColor" opacity="0.12"/>
+
+                            <!-- Blank line -->
+
+                            <!-- Comment -->
+                            <rect x="42" y="130" width="180" height="4" rx="1" fill="currentColor" opacity="0.08"/>
+
+                            <!-- Function def -->
+                            <rect x="42" y="146" width="24" height="4" rx="1" fill="currentColor" opacity="0.35"/>
+                            <rect x="72" y="146" width="70" height="4" rx="1" fill="currentColor" opacity="0.18"/>
+                            <rect x="148" y="146" width="90" height="4" rx="1" fill="currentColor" opacity="0.1"/>
+
+                            <!-- Indented code -->
+                            <rect x="60" y="162" width="55" height="4" rx="1" fill="currentColor" opacity="0.15"/>
+                            <rect x="120" y="162" width="30" height="4" rx="1" fill="currentColor" opacity="0.25"/>
+                            <rect x="156" y="162" width="80" height="4" rx="1" fill="currentColor" opacity="0.1"/>
+
+                            <rect x="60" y="178" width="55" height="4" rx="1" fill="currentColor" opacity="0.15"/>
+                            <rect x="120" y="178" width="40" height="4" rx="1" fill="currentColor" opacity="0.25"/>
+                            <rect x="166" y="178" width="100" height="4" rx="1" fill="currentColor" opacity="0.1"/>
+
+                            <rect x="60" y="194" width="55" height="4" rx="1" fill="currentColor" opacity="0.15"/>
+                            <rect x="120" y="194" width="50" height="4" rx="1" fill="currentColor" opacity="0.25"/>
+                            <rect x="176" y="194" width="70" height="4" rx="1" fill="currentColor" opacity="0.1"/>
+
+                            <!-- Blank line -->
+
+                            <!-- Return statement -->
+                            <rect x="60" y="226" width="40" height="4" rx="1" fill="currentColor" opacity="0.35"/>
+                            <rect x="106" y="226" width="110" height="4" rx="1" fill="currentColor" opacity="0.15"/>
+
+                            <!-- Blank line + call -->
+                            <rect x="42" y="242" width="70" height="4" rx="1" fill="currentColor" opacity="0.18"/>
+                            <rect x="118" y="242" width="14" height="4" rx="1" fill="currentColor" opacity="0.25"/>
+                            <rect x="138" y="242" width="80" height="4" rx="1" fill="currentColor" opacity="0.1"/>
+
+                            <rect x="42" y="258" width="36" height="4" rx="1" fill="currentColor" opacity="0.3"/>
+                            <rect x="84" y="258" width="50" height="4" rx="1" fill="currentColor" opacity="0.12"/>
+
+                            <!-- Cursor blink line -->
+                            <rect x="140" y="256" width="1.5" height="10" rx="0.5" fill="currentColor" opacity="0.4"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="section-indicator">
+                <span class="indicator-text" data-i18n="indicator.projects">PROJEKTE</span>
+                <div class="indicator-line"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="projects.title">Projekte</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Machine Learning & Data Analytics Arbeiten</p>
+            </div>
+            <div class="projects-grid">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop" alt="Credit Default Risk Assessment">
+                        <div class="project-overlay">
+                            <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            <span data-i18n="projects.viewGithub">Auf GitHub ansehen</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>XGBoost</span>
+                            <span>SHAP</span>
+                        </div>
+                        <h3 class="project-title" data-i18n="projects.project1.title">Kreditausfall-Risikobewertung</h3>
+                        <p class="project-description" data-i18n="projects.project1.desc">Kreditgenehmigungsvorhersage mit XGBoost und 89,34% F1-Score. Mit SHAP-Erklärbarkeit, AUC-ROC von 0,92 und Weight of Evidence Analyse.</p>
+                    </div>
+                </a>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" alt="Customer Segmentation">
+                        <div class="project-overlay">
+                            <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            <span data-i18n="projects.viewGithub">Auf GitHub ansehen</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>K-Means</span>
+                            <span>Scikit-learn</span>
+                        </div>
+                        <h3 class="project-title" data-i18n="projects.project2.title">Kreditkarten-Kundensegmentierung</h3>
+                        <p class="project-description" data-i18n="projects.project2.desc">Kundensegmentierung mit K-Means und Ellbogen-Methode auf Kaggle-Kreditkartendaten. 5 Cluster identifiziert für gezielte Kundenbindungsstrategien.</p>
+                    </div>
+                </a>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="Healthcare Dashboard">
+                        <div class="project-overlay">
+                            <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            <span data-i18n="projects.viewGithub">Auf GitHub ansehen</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tech">
+                            <span>Power BI</span>
+                            <span>DAX</span>
+                            <span>Power Query</span>
+                        </div>
+                        <h3 class="project-title" data-i18n="projects.project3.title">Gesundheitswesen Abrechnungs- &amp; Betrugserkennung Dashboard</h3>
+                        <p class="project-description" data-i18n="projects.project3.desc">Power BI Dashboard zur Analyse von Gesundheitsabrechnungen und Identifizierung betrügerischer Aktivitäten mit interaktiven Diagrammen, Filtern und Compliance-Überwachung.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section">
+            <div class="resume-container">
+                <div class="resume-left">
+                    <h2 class="section-title" data-i18n="resume.title">Lebenslauf</h2>
+                    <p class="resume-subtitle" data-i18n="resume.subtitle">Eine Zusammenfassung meiner Erfahrung, Fähigkeiten und Ausbildung.</p>
+                    <a href="amaanresume-de.pdf" download class="resume-download-btn" id="resumeDownload">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        <span data-i18n="resume.download">Lebenslauf herunterladen</span>
+                    </a>
+                </div>
+                <div class="resume-preview">
+                    <iframe id="resumePreview" src="amaanresume-de.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="Resume Preview"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="contact-content">
+                <h2 class="contact-title" data-i18n="contact.title">Lass uns zusammenarbeiten</h2>
+                <p class="contact-description" data-i18n="contact.description">
+                    Melden Sie sich gerne, wenn Sie zusammenarbeiten, Ideen besprechen oder sich vernetzen möchten.
+                    Ich interessiere mich für Werkstudentenstellen im Bereich Machine Learning, Data Analytics, KI und forschungsorientierte Projekte.
+                </p>
+                <a href="mailto:shaikh.mohdamaan@gmail.com" class="contact-email">shaikh.mohdamaan@gmail.com</a>
+                <div class="contact-social">
+                    <a href="https://www.linkedin.com/in/amaanxshaikh/" target="_blank" rel="noopener noreferrer" class="contact-social-link">LinkedIn</a>
+                    <a href="https://github.com/AmaanxShaikh" target="_blank" rel="noopener noreferrer" class="contact-social-link">GitHub</a>
+                </div>
+                <p class="footer-text" data-i18n="contact.footer">&copy; 2026 Mohammed Amaan Shaikh. Alle Rechte vorbehalten.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

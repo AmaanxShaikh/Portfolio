@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:amaanxshaikh.github.io)",
+      "Bash(dir \"C:\\\\Users\\\\shaik\\\\OneDrive\\\\Desktop\\\\MinimalPort\")"
+    ]
+  }
+}

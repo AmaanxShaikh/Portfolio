@@ -1056,6 +1056,75 @@ body {
         flex-wrap: wrap;
         gap: 20px;
     }
+
+    /* Skills section mobile */
+    .skills-section {
+        padding: 100px 30px 40px;
+        height: auto;
+        min-height: auto;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 100%;
+    }
+
+    .skill-category-title {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .skill-tag {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    /* Projects carousel mobile */
+    .projects-section {
+        height: auto;
+        min-height: auto;
+        padding: 80px 20px 40px;
+    }
+
+    .projects-carousel {
+        flex-direction: column;
+        max-height: none;
+        gap: 15px;
+    }
+
+    .carousel-arrow {
+        display: none;
+    }
+
+    .projects-track-wrapper {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .projects-track {
+        flex-direction: column;
+        gap: 20px;
+        transform: none !important;
+    }
+
+    .project-card {
+        width: 100%;
+        max-height: none;
+    }
+
+    .project-image {
+        height: 180px;
+    }
+
+    .project-description {
+        -webkit-line-clamp: unset;
+        display: block;
+    }
+
+    .carousel-dots {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1186,6 +1255,25 @@ body {
     .footer-text {
         font-size: 11px;
     }
+
+    /* Skills section small mobile */
+    .skills-section {
+        padding: 90px 20px 30px;
+    }
+
+    .skill-category-title {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .skill-tag {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .skill-tags {
+        gap: 8px;
+    }
 }
 
 /* Mobile Overlay */
@@ -1260,14 +1348,4 @@ body {
     color: var(--color-bg);
 }
 
-@media (max-width: 992px) {
-    .mobile-overlay {
-        display: flex;
-    }
-
-    .header,
-    .fullpage-wrapper,
-    .social-sidebar {
-        display: none !important;
-    }
-}
+/* Mobile overlay removed - site now works on mobile */

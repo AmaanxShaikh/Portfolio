@@ -425,7 +425,7 @@ function goToSlide(index) {
 
     // Calculate translation based on card width + gap
     const cardWidth = projectCards[0].offsetWidth;
-    const gap = 25;
+    const gap = window.innerWidth <= 992 ? 15 : 25;
     const translateX = carouselIndex * cardsPerView * (cardWidth + gap);
 
     projectsTrack.style.transform = `translateX(-${translateX}px)`;

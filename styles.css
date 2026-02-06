@@ -396,11 +396,12 @@ body {
 /* Projects Section */
 .projects-section {
     height: 100vh;
-    padding: 120px 80px;
+    padding: 100px 80px;
     background-color: var(--color-bg-secondary);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
 /* Projects Carousel */
@@ -410,6 +411,9 @@ body {
     gap: 20px;
     width: 100%;
     position: relative;
+    flex: 1;
+    max-height: calc(100vh - 280px);
+    overflow: hidden;
 }
 
 .carousel-arrow {
@@ -445,19 +449,22 @@ body {
 .projects-track-wrapper {
     flex: 1;
     overflow: hidden;
+    max-height: 380px;
 }
 
 .projects-track {
     display: flex;
     gap: 25px;
     transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+    height: 100%;
 }
 
 .carousel-dots {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
+    flex-shrink: 0;
 }
 
 .carousel-dot {
@@ -486,9 +493,11 @@ body {
     color: var(--color-text);
     transition: transform var(--transition-medium), box-shadow var(--transition-medium);
     cursor: pointer;
-    display: block;
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
     width: calc((100% - 50px) / 3);
+    max-height: 100%;
 }
 
 .project-card:hover {
@@ -497,9 +506,10 @@ body {
 }
 
 .project-image {
-    height: 160px;
+    height: 140px;
     overflow: hidden;
     position: relative;
+    flex-shrink: 0;
 }
 
 .project-image img {
@@ -543,7 +553,9 @@ body {
 }
 
 .project-info {
-    padding: 20px;
+    padding: 16px;
+    flex: 1;
+    overflow: hidden;
 }
 
 .project-tech {
@@ -570,9 +582,13 @@ body {
 }
 
 .project-description {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--color-text-secondary);
-    line-height: 1.6;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Resume Section */

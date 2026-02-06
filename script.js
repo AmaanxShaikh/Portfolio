@@ -113,6 +113,12 @@ function setLanguage(lang) {
         resumePreview.src = `${resumeFile}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`;
     }
 
+    // Update macOS window filename
+    const macosFilename = document.getElementById('macosFilename');
+    if (macosFilename) {
+        macosFilename.textContent = lang === 'de' ? 'resume-de.pdf' : 'resume-en.pdf';
+    }
+
     // Update active state on toggle
     document.querySelectorAll('.lang-option').forEach(opt => {
         opt.classList.toggle('active', opt.dataset.lang === lang);
@@ -346,4 +352,99 @@ document.addEventListener('visibilitychange', () => {
     } else {
         document.title = 'Portfolio | Mohammed Amaan - Data Scientist';
     }
+});
+
+// ── Projects Carousel ──
+const projectsTrack = document.querySelector('.projects-track');
+const projectCards = document.querySelectorAll('.project-card');
+const prevBtn = document.querySelector('.carousel-prev');
+const nextBtn = document.querySelector('.carousel-next');
+const dotsContainer = document.querySelector('.carousel-dots');
+
+let carouselIndex = 0;
+let cardsPerView = 3;
+const totalCards = projectCards.length;
+
+function getCardsPerView() {
+    if (window.innerWidth <= 992) return 1;
+    if (window.innerWidth <= 1200) return 2;
+    return 3;
+}
+
+function getTotalSlides() {
+    return Math.ceil(totalCards / cardsPerView);
+}
+
+function createDots() {
+    dotsContainer.innerHTML = '';
+    const totalSlides = getTotalSlides();
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.className = `carousel-dot${i === 0 ? ' active' : ''}`;
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+}
+
+function updateDots() {
+    const dots = document.querySelectorAll('.carousel-dot');
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === carouselIndex);
+    });
+}
+
+function updateArrows() {
+    const totalSlides = getTotalSlides();
+    prevBtn.disabled = carouselIndex === 0;
+    nextBtn.disabled = carouselIndex >= totalSlides - 1;
+}
+
+function goToSlide(index) {
+    const totalSlides = getTotalSlides();
+    if (index < 0) index = 0;
+    if (index >= totalSlides) index = totalSlides - 1;
+
+    carouselIndex = index;
+
+    // Calculate translation based on card width + gap
+    const cardWidth = projectCards[0].offsetWidth;
+    const gap = 25;
+    const translateX = carouselIndex * cardsPerView * (cardWidth + gap);
+
+    projectsTrack.style.transform = `translateX(-${translateX}px)`;
+
+    updateDots();
+    updateArrows();
+}
+
+function initCarousel() {
+    cardsPerView = getCardsPerView();
+    carouselIndex = 0;
+    createDots();
+    goToSlide(0);
+}
+
+prevBtn.addEventListener('click', () => {
+    goToSlide(carouselIndex - 1);
+});
+
+nextBtn.addEventListener('click', () => {
+    goToSlide(carouselIndex + 1);
+});
+
+// Initialize carousel
+initCarousel();
+
+// Reinitialize on resize
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        const newCardsPerView = getCardsPerView();
+        if (newCardsPerView !== cardsPerView) {
+            cardsPerView = newCardsPerView;
+            initCarousel();
+        }
+    }, 200);
 });

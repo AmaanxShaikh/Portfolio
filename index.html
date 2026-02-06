@@ -281,7 +281,14 @@
                 <h2 class="section-title" data-i18n="projects.title">Projekte</h2>
                 <p class="section-subtitle" data-i18n="projects.subtitle">Machine Learning & Data Analytics Arbeiten</p>
             </div>
-            <div class="projects-grid">
+            <div class="projects-carousel">
+                <button class="carousel-arrow carousel-prev" aria-label="Previous projects">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <div class="projects-track-wrapper">
+                    <div class="projects-track">
                 <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop" alt="Credit Default Risk Assessment">
@@ -390,7 +397,15 @@
                         <p class="project-description" data-i18n="projects.project6.desc">Lineare Regression zur Vorhersage von Versicherungskosten mit R²-Wert von 0.74. Umfassende Datenanalyse und Visualisierung mit Seaborn und Matplotlib.</p>
                     </div>
                 </a>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-next" aria-label="Next projects">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
             </div>
+            <div class="carousel-dots"></div>
         </section>
 
         <!-- Resume Section -->
@@ -409,7 +424,19 @@
                     </a>
                 </div>
                 <div class="resume-preview">
-                    <iframe id="resumePreview" src="amaanresume-de.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="Resume Preview"></iframe>
+                    <div class="macos-window">
+                        <div class="macos-titlebar">
+                            <div class="macos-buttons">
+                                <span class="macos-btn red"></span>
+                                <span class="macos-btn yellow"></span>
+                                <span class="macos-btn green"></span>
+                            </div>
+                            <span class="macos-filename" id="macosFilename">resume-de.pdf</span>
+                        </div>
+                        <div class="macos-content">
+                            <iframe id="resumePreview" src="amaanresume-de.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="Resume Preview"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

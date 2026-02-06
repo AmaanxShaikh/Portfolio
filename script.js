@@ -15,16 +15,24 @@ themeToggle.addEventListener('click', () => {
 const translations = {
     de: {
         'nav.profile': 'Profil',
+        'nav.skills': 'Fähigkeiten',
         'nav.projects': 'Projekte',
         'nav.resume': 'Lebenslauf',
         'nav.contact': 'Kontakt',
         'hero.greeting': 'Hallo,',
         'hero.name': 'Ich bin Mohammed Amaan.',
         'hero.desc1': 'Angehender Data Scientist & ML Engineer.',
-        'hero.desc2': 'Interessiert an Machine Learning, NLP und datengetriebenen Lösungen.',
+        'hero.desc2': 'Interessiert an Machine Learning, AI und Business Intelligence.',
         'hero.desc3': 'Masterstudent an der OvGU Magdeburg, Deutschland.',
         'hero.resumeLink': 'Lebenslauf ansehen',
+        'indicator.skills': 'FÄHIGKEITEN',
         'indicator.projects': 'PROJEKTE',
+        'skills.title': 'Fähigkeiten',
+        'skills.subtitle': 'Technologien & Werkzeuge',
+        'skills.languages': 'Programmiersprachen',
+        'skills.datascience': 'Data Science',
+        'skills.frameworks': 'Frameworks',
+        'skills.tools': 'Technologien',
         'projects.title': 'Projekte',
         'projects.subtitle': 'Machine Learning & Data Analytics Arbeiten',
         'projects.viewGithub': 'Auf GitHub ansehen',
@@ -49,16 +57,24 @@ const translations = {
     },
     en: {
         'nav.profile': 'Profile',
+        'nav.skills': 'Skills',
         'nav.projects': 'Projects',
         'nav.resume': 'Resume',
         'nav.contact': 'Contact',
         'hero.greeting': 'Hello,',
         'hero.name': "I'm Mohammed Amaan.",
         'hero.desc1': 'An Aspiring Data Scientist & ML Engineer.',
-        'hero.desc2': 'Interested in machine learning, AI, and business intelligence',
+        'hero.desc2': 'Interested in machine learning, AI, and business intelligence.',
         'hero.desc3': "Master's student at OvGU Magdeburg, Germany.",
         'hero.resumeLink': 'Get My Resume',
+        'indicator.skills': 'SKILLS',
         'indicator.projects': 'PROJECTS',
+        'skills.title': 'Skills',
+        'skills.subtitle': 'Technologies & Tools',
+        'skills.languages': 'Programming Languages',
+        'skills.datascience': 'Data Science',
+        'skills.frameworks': 'Frameworks',
+        'skills.tools': 'Technologies',
         'projects.title': 'Projects',
         'projects.subtitle': 'Machine learning & data analytics work',
         'projects.viewGithub': 'View on GitHub',
@@ -266,7 +282,7 @@ if (sectionIndicator) {
 // ── Section animations ──
 function animateSectionElements(index) {
     const section = fpSections[index];
-    const elements = section.querySelectorAll('.project-card, .section-header, .contact-content, .resume-container');
+    const elements = section.querySelectorAll('.project-card, .section-header, .contact-content, .resume-container, .skills-container, .skill-category');
 
     elements.forEach((el, i) => {
         el.style.opacity = '0';

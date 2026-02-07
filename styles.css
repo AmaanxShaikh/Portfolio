@@ -516,20 +516,13 @@ body {
     text-decoration: underline;
 }
 
-.project-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 2px;
-}
-
 .project-description {
     font-size: 11px;
     color: var(--color-text-secondary);
+    margin-top: 2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    flex: 1;
 }
 
 .project-tech {
@@ -538,7 +531,7 @@ body {
     gap: 4px;
     font-size: 11px;
     color: var(--color-text-muted);
-    flex-shrink: 0;
+    margin-top: 4px;
 }
 
 .tech-dot {
